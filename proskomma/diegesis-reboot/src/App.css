@@ -1,0 +1,52 @@
+.error {
+    color: #A00
+}
+
+.isLoaded {
+    padding: 5px;
+    text-align: center;
+    background-color: #AFA;
+    color: #000
+}
+
+.isNotLoaded {
+    padding: 5px;
+    text-align: center;
+    background-color: #777;
+    color: #FFF
+}
+
+.headerTitle {
+    display: block;
+    font-size: 1.17em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+.mainContentTitle {
+    display: block;
+    font-size: 1.17em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+.mainContentTitle2 {
+    display: block;
+    font-size: 1em;
+    margin-top: 1.33em;
+    margin-bottom: 1.33em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+.hanging {
+    padding-left: 1.5em;
+    text-indent: -1.5em;
+}
