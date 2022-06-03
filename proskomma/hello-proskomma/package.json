@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "fs-extra": "^10.1.0",
+    "path": "^0.12.7",
+    "proskomma": "^0.7.4"
+  }
+}
