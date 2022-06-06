@@ -6,11 +6,11 @@ let content = fse.readFileSync(path.resolve(__dirname, './psa.usfm')).toString()
 
 const queryPk = async function (pk, query, callback) {
     const result = await pk.gqlQuery(query);
-    callback(JSON.stringify(result, null, 2));
+    callback(result);
 }
 
 const printData = function(json) {
-    console.log(json);
+    console.log(JSON.stringify(json, null, 2));
 }
 
 const mutation = `mutation { addDocument(` +
