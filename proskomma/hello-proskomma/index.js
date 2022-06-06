@@ -19,12 +19,43 @@ const mutation = `mutation { addDocument(` +
     `content: """${content}""") }`;
 
 queryPk(pk, mutation, () => {});
-
+/*
 const dataQuery = `{
-    documents {
-        headers {
-            key
-            value
+    docSets { 
+        id
+        document(bookCode:"PSA") {
+            bookCode: header(id: "bookCode")
+            cv(chapterVerses:"${parsedReference.split(/\s+/)[1]}") {
+                scopeLabels(startsWith:["chapter", "verses"])
+                text
+            }
+            mainSequence {
+                blocks(withScriptureCV:"${parsedReference.split(/\s+/)[1]}") {
+                    scopeLabels(startsWith: ["blockTag"])
+                    text (withScriptureCV:"${parsedReference.split(/\s+/)[1]}")
+                    items{type subType payload}
+                }
+            }
+        }
+    }
+}`;
+*/
+const dataQuery = `{
+    docSets { 
+        id
+        document(bookCode:"PSA") {
+            bookCode: header(id: "bookCode")
+            cv(chapterVerses:"150:1-2") {
+                scopeLabels(startsWith:["chapter", "verses"])
+                text
+            }
+            mainSequence {
+                blocks(withScriptureCV:"150:1") {
+                    scopeLabels(startsWith: ["blockTag"])
+                    text (withScriptureCV:"150:1")
+                    items{type subType payload}
+                }
+            }
         }
     }
 }`;
