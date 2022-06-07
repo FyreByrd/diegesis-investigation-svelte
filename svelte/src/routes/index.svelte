@@ -1,5 +1,5 @@
 <script>
-    import { pk } from "$lib/data/stores.js";
+    import { pk, test } from "$lib/data/stores.js";
 
     const getData = async function() {
         const res = await $pk.query(`{
@@ -10,7 +10,9 @@
                 }
             }
         }`);
-        return JSON.stringify(res, null, 2);
+        let j = JSON.stringify(res, null, 2);
+        console.log(j);
+        return j;
     }
     let promise = getData();
 </script>
@@ -28,3 +30,4 @@
 {error.message}
 </pre>
 {/await}
+<p>{$test}</p>

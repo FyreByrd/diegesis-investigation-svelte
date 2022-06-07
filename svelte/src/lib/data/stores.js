@@ -1,11 +1,5 @@
 import { pkStore } from './pkstore';
-import { readFileSync } from 'fs-extra';
+import { readable } from 'svelte/store';
 
-let filenames = ["WEB.pkzip"];
-let files = [];
-
-for(var i = 0; i<filenames.length; i++) {
-    files[i] = readFileSync(filenames[i]).toString();
-}
-
-export const pk = pkStore(files);
+export const pk = pkStore();
+export const test = readable(1);
