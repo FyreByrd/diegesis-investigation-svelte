@@ -1,9 +1,11 @@
-import { thaw } from 'proskomma-freeze';
-import {Proskomma} from 'proskomma';
-import { readable } from 'svelte/store';
+import { pkStore } from './pkstore';
 import { readFileSync } from 'fs-extra';
 
-export const pk = readable(
-    new Proskomma(),
-    () => thaw(this, readFileSync("./WEB.pkzip").toString());
-);
+let filenames = ["WEB.pkzip"];
+let files = [];
+
+for(var i = 0; i<filenames.length; i++) {
+    files[i] = readFileSync(filenames[i]).toString();
+}
+
+export const pk = pkStore(files);

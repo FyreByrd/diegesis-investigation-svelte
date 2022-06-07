@@ -1,18 +1,30 @@
 <script>
     import { pk } from "$lib/data/stores.js";
-    
-    const queryPk = async function (query, callback) {
-        const result = await $pk.gqlQuery(query);
-        callback(result);
-    }
 
-    const getData = function(json) {
-        res = JSON.stringify(json, null, 2);
+    const getData = async function() {
+        const res = await $pk.query(`{
+            docSets { 
+                id
+                documents {
+                    bookCode: header(id: "bookCode")
+                }
+            }
+        }`);
+        return JSON.stringify(res, null, 2);
     }
-    let res;
-    $: data = res;
+    let promise = getData();
 </script>
 
+{#await promise}
+<pre>
+...waiting
+</pre>
+{:then data}
 <pre>
 {data}
 </pre>
+{:catch error}
+<pre style="color: red">
+{error.message}
+</pre>
+{/await}
