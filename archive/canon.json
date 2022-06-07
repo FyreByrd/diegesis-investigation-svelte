@@ -1,266 +1,794 @@
 {"canon":[
-    ["./usfm/02-GENeng-web.usfm", {
+    ["./usfm/web/02-GENeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/03-EXOeng-web.usfm", {
+    ["./usfm/web/03-EXOeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/04-LEVeng-web.usfm", {
+    ["./usfm/web/04-LEVeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/05-NUMeng-web.usfm", {
+    ["./usfm/web/05-NUMeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/06-DEUeng-web.usfm", {
+    ["./usfm/web/06-DEUeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/07-JOSeng-web.usfm", {
+    ["./usfm/web/07-JOSeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/08-JDGeng-web.usfm", {
+    ["./usfm/web/08-JDGeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/09-RUTeng-web.usfm", {
+    ["./usfm/web/09-RUTeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/10-1SAeng-web.usfm", {
+    ["./usfm/web/10-1SAeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/11-2SAeng-web.usfm", {
+    ["./usfm/web/11-2SAeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/12-1KIeng-web.usfm", {
+    ["./usfm/web/12-1KIeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/13-2KIeng-web.usfm", {
+    ["./usfm/web/13-2KIeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/14-1CHeng-web.usfm", {
+    ["./usfm/web/14-1CHeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/15-2CHeng-web.usfm", {
+    ["./usfm/web/15-2CHeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/16-EZReng-web.usfm", {
+    ["./usfm/web/16-EZReng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/17-NEHeng-web.usfm", {
+    ["./usfm/web/17-NEHeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/18-ESTeng-web.usfm", {
+    ["./usfm/web/18-ESTeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/19-JOBeng-web.usfm", {
+    ["./usfm/web/19-JOBeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/20-PSAeng-web.usfm", {
+    ["./usfm/web/20-PSAeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/21-PROeng-web.usfm", {
+    ["./usfm/web/21-PROeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/22-ECCeng-web.usfm", {
+    ["./usfm/web/22-ECCeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/23-SNGeng-web.usfm", {
+    ["./usfm/web/23-SNGeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/24-ISAeng-web.usfm", {
+    ["./usfm/web/24-ISAeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/25-JEReng-web.usfm", {
+    ["./usfm/web/25-JEReng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/26-LAMeng-web.usfm", {
+    ["./usfm/web/26-LAMeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/27-EZKeng-web.usfm", {
+    ["./usfm/web/27-EZKeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/28-DANeng-web.usfm", {
+    ["./usfm/web/28-DANeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/29-HOSeng-web.usfm", {
+    ["./usfm/web/29-HOSeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/30-JOLeng-web.usfm", {
+    ["./usfm/web/30-JOLeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/31-AMOeng-web.usfm", {
+    ["./usfm/web/31-AMOeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/32-OBAeng-web.usfm", {
+    ["./usfm/web/32-OBAeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/33-JONeng-web.usfm", {
+    ["./usfm/web/33-JONeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/34-MICeng-web.usfm", {
+    ["./usfm/web/34-MICeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/35-NAMeng-web.usfm", {
+    ["./usfm/web/35-NAMeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/36-HABeng-web.usfm", {
+    ["./usfm/web/36-HABeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/37-ZEPeng-web.usfm", {
+    ["./usfm/web/37-ZEPeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/38-HAGeng-web.usfm", {
+    ["./usfm/web/38-HAGeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/39-ZECeng-web.usfm", {
+    ["./usfm/web/39-ZECeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/40-MALeng-web.usfm", {
+    ["./usfm/web/40-MALeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/70-MATeng-web.usfm", {
+    ["./usfm/web/70-MATeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/71-MRKeng-web.usfm", {
+    ["./usfm/web/71-MRKeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/72-LUKeng-web.usfm", {
+    ["./usfm/web/72-LUKeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/73-JHNeng-web.usfm", {
+    ["./usfm/web/73-JHNeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/74-ACTeng-web.usfm", {
+    ["./usfm/web/74-ACTeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/75-ROMeng-web.usfm", {
+    ["./usfm/web/75-ROMeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/76-1COeng-web.usfm", {
+    ["./usfm/web/76-1COeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/77-2COeng-web.usfm", {
+    ["./usfm/web/77-2COeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/78-GALeng-web.usfm", {
+    ["./usfm/web/78-GALeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/79-EPHeng-web.usfm", {
+    ["./usfm/web/79-EPHeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/80-PHPeng-web.usfm", {
+    ["./usfm/web/80-PHPeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/81-COLeng-web.usfm", {
+    ["./usfm/web/81-COLeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/82-1THeng-web.usfm", {
+    ["./usfm/web/82-1THeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/83-2THeng-web.usfm", {
+    ["./usfm/web/83-2THeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/84-1TIeng-web.usfm", {
+    ["./usfm/web/84-1TIeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/85-2TIeng-web.usfm", {
+    ["./usfm/web/85-2TIeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/86-TITeng-web.usfm", {
+    ["./usfm/web/86-TITeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/87-PHMeng-web.usfm", {
+    ["./usfm/web/87-PHMeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/88-HEBeng-web.usfm", {
+    ["./usfm/web/88-HEBeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/89-JAseng-web.usfm", {
+    ["./usfm/web/89-JASeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/90-1PEeng-web.usfm", {
+    ["./usfm/web/90-1PEeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/91-2PEeng-web.usfm", {
+    ["./usfm/web/91-2PEeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/92-1JNeng-web.usfm", {
+    ["./usfm/web/92-1JNeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/93-2JNeng-web.usfm", {
+    ["./usfm/web/93-2JNeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/94-3JNeng-web.usfm", {
+    ["./usfm/web/94-3JNeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/95-JUDeng-web.usfm", {
+    ["./usfm/web/95-JUDeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
     }],
-    ["./usfm/96-REVeng-web.usfm", {
+    ["./usfm/web/96-REVeng-web.usfm", {
         "lang": "eng",
         "abbr": "web"
+    }],
+    ["./usfm/cuk/02-GENcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/03-EXOcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/04-LEVcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/05-NUMcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/06-DEUcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/07-JOScuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/08-JDGcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/09-RUTcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/10-1SAcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/11-2SAcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/12-1KIcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/13-2KIcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/14-1CHcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/15-2CHcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/16-EZRcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/17-NEHcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/18-ESTcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/19-JOBcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/20-PSAcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/21-PROcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/22-ECCcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/23-SNGcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/24-ISAcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/25-JERcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/26-LAMcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/27-EZKcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/28-DANcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/29-HOScuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/30-JOLcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/31-AMOcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/32-OBAcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/33-JONcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/34-MICcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/35-NAMcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/36-HABcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/37-ZEPcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/38-HAGcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/39-ZECcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/40-MALcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/46-MATcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/47-MRKcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/48-LUKcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/50-ACTcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/51-ROMcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/52-1COcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/53-2COcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/54-GALcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/55-EPHcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/56-PHPcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/57-COLcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/58-1THcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/59-2THcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/60-1TIcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/61-2TIcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/62-TITcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/63-PHMcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/64-HEBcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/65-JAScuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/66-1PEcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/68-1JNcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/69-2JNcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/70-3JNcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/71-JUDcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/72-REVcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/73-JHNcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/cuk/91-2PEcuk.usfm", {
+        "lang": "cuk",
+        "abbr": "cukB"
+    }],
+    ["./usfm/lsv/GEN.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/EXO.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/LEV.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/NUM.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/DEU.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/JOS.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/JDG.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/RUT.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/1SA.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/2SA.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/1KI.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/2KI.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/1CH.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/2CH.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/EZR.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/NEH.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/EST.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/JOB.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/PSA.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/PRO.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/ECC.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/SNG.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/ISA.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/JER.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/LAM.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/EZK.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/DAN.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/HOS.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/JOL.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/AMO.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/OBA.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/JON.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/MIC.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/NAM.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/HAB.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/ZEP.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/HAG.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/ZEC.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/MAL.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/MAT.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/MRK.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/LUK.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/JHN.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/ACT.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/ROM.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/1CO.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/2CO.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/GAL.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/EPH.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/PHP.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/COL.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/1TH.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/2TH.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/1TI.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/2TI.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/TIT.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/PHM.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/HEB.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/JAS.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/1PE.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/2PE.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/1JN.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/2JN.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/3JN.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/JUD.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
+    }],
+    ["./usfm/lsv/REV.usfm", {
+        "lang": "eng",
+        "abbr": "lsv"
     }]
 ]}

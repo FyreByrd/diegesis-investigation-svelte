@@ -5,7 +5,7 @@ const { freeze } = require('proskomma-freeze');
 const filename = 'test.pkzip';
 
 const pk = pkWithDocs(
-    JSON.parse(fs.readFileSync("canon.json")).canon
+    JSON.parse(fs.readFileSync("./usfm/eng_lsv.json")).canon
 );
 
 const frozen = freeze(pk);

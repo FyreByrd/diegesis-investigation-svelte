@@ -1,31 +1,9 @@
-//import { pkWithDocs } from '../scripts/load';
+import { thaw } from 'proskomma-freeze';
+import {Proskomma} from 'proskomma';
 import { readable } from 'svelte/store';
+import { readFileSync } from 'fs-extra';
 
-const pk = readable(
-    /*
-	pkWithDocs(import.meta.url,[
-        ['./usfm/02-GENeng-web.usfm', {
-            lang: 'eng',
-            abbr: 'web',
-        }],
-        ['./usfm/03-EXOeng-web.usfm', {
-            lang: 'eng',
-            abbr: 'web',
-        }],
-        ['./usfm/04-LEVeng-web.usfm', {
-            lang: 'eng',
-            abbr: 'web',
-        }],
-        ['./usfm/05-NUMeng-web.usfm', {
-            lang: 'eng',
-            abbr: 'web',
-        }],
-        ['./usfm/06-DEUeng-web.usfm', {
-            lang: 'eng',
-            abbr: 'web',
-        }],
-    ]),*/
-    () => {}
+export const pk = readable(
+    new Proskomma(),
+    () => thaw(this, readFileSync("./WEB.pkzip").toString());
 );
-
-export { pk }
