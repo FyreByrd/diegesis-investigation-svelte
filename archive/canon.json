@@ -1,0 +1,266 @@
+{"canon":[
+    ["./usfm/02-GENeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/03-EXOeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/04-LEVeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/05-NUMeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/06-DEUeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/07-JOSeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/08-JDGeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/09-RUTeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/10-1SAeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/11-2SAeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/12-1KIeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/13-2KIeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/14-1CHeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/15-2CHeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/16-EZReng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/17-NEHeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/18-ESTeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/19-JOBeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/20-PSAeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/21-PROeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/22-ECCeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/23-SNGeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/24-ISAeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/25-JEReng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/26-LAMeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/27-EZKeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/28-DANeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/29-HOSeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/30-JOLeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/31-AMOeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/32-OBAeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/33-JONeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/34-MICeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/35-NAMeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/36-HABeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/37-ZEPeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/38-HAGeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/39-ZECeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/40-MALeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/70-MATeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/71-MRKeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/72-LUKeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/73-JHNeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/74-ACTeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/75-ROMeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/76-1COeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/77-2COeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/78-GALeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/79-EPHeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/80-PHPeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/81-COLeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/82-1THeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/83-2THeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/84-1TIeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/85-2TIeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/86-TITeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/87-PHMeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/88-HEBeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/89-JAseng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/90-1PEeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/91-2PEeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/92-1JNeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/93-2JNeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/94-3JNeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/95-JUDeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }],
+    ["./usfm/96-REVeng-web.usfm", {
+        "lang": "eng",
+        "abbr": "web"
+    }]
+]}
