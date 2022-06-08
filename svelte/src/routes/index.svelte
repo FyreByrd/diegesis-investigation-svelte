@@ -21,6 +21,7 @@
 
 </script>
 
+<p>query:</p>
 {#await promise}
 	<p>...waiting</p>
 {:then data}
@@ -28,4 +29,5 @@
 {:catch error}
 	<p style="color: red">{error.message}</p>
 {/await}
-<p>{$test}</p>
+<p>Proskomma:</p>
+<pre>{JSON.stringify($pk, null, 2)}</pre>
