@@ -5,8 +5,14 @@ import {eng_web_jhn} from './eng_web_jhn';
 
 export function pkStore() {
     let _val = new Proskomma();
+    let initialized = false;
     const subs = [];
-    thaw(_val, eng_web_jhn);
+
+    //thaws frozen archives
+    const init = async () => {
+        await thaw(_val, eng_web_jhn);
+        initialized = true;
+    }
 
     const subscribe = (cb) => {
         subs.push(cb);
@@ -18,8 +24,13 @@ export function pkStore() {
         };
     };
 
-    const query = (q) => {
-        return _val.gqlQuery(q);
+    const query = async (q) => {
+        //ensures _val is initialized before querying
+        if(!initialized) {
+            await init();
+        }
+        console.log("query")
+        return _val.gqlQuery(q, () => console.log("finished query"));
     };
 
     return { subscribe, query };

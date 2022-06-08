@@ -2,7 +2,8 @@
     import { pk, test } from "$lib/data/stores.js";
 
     const getData = async function() {
-        const res = await $pk.query(`{
+        console.log("index")
+        const res = await pk.query(`{
             docSets { 
                 id
                 documents {
