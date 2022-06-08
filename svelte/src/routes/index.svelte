@@ -12,23 +12,20 @@
             }
         }`);
         let j = JSON.stringify(res, null, 2);
+        console.log("getdata")
         console.log(j);
         return j;
     }
     let promise = getData();
+
+
 </script>
 
 {#await promise}
-<pre>
-...waiting
-</pre>
+	<p>...waiting</p>
 {:then data}
-<pre>
-{data}
-</pre>
+	<pre>{data}</pre>
 {:catch error}
-<pre style="color: red">
-{error.message}
-</pre>
+	<p style="color: red">{error.message}</p>
 {/await}
 <p>{$test}</p>

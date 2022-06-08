@@ -10,7 +10,14 @@ export function pkStore() {
 
     //thaws frozen archives
     const init = async () => {
-        await thaw(_val, eng_web_jhn);
+        try {
+            if(!initialized) {
+                await thaw(_val, eng_web_jhn);
+            }
+        }
+        catch(err) {
+            console.log(err)
+        }
         initialized = true;
     }
 
@@ -30,7 +37,10 @@ export function pkStore() {
             await init();
         }
         console.log("query")
-        return _val.gqlQuery(q, () => console.log("finished query"));
+        let r = await _val.gqlQuery(q, () => console.log("finished query"));
+        console.log("r")
+        console.log(JSON.stringify(r, null, 2))
+        return r;
     };
 
     return { subscribe, query };
