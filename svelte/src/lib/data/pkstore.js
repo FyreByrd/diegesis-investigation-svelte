@@ -1,19 +1,29 @@
 import { Proskomma } from 'proskomma';
 import { thaw } from 'proskomma-freeze';
 import {eng_web_jhn} from './eng_web_jhn';
-
+import {eng_lsv_pent} from './eng_lsv_pent';
 
 export function pkStore() {
     let _val = new Proskomma();
-    let initialized = false;
+    //let initialized = null;
     const subs = [];
+
+    const memo = {initialized: null}
+    function memoInit(){
+        if(memo["initialized"] !== null) {
+            return memo["initialized"];
+        }
+
+        memo["initialized"] = init(); // memoize the promise for key
+        return memo["initialized"];
+    }
 
     //thaws frozen archives
     const init = async () => {
-        if(!initialized) {
-            await thaw(_val, eng_web_jhn);
-        }
-        initialized = true;
+        //console.log("initializing");
+        await thaw(_val, eng_web_jhn);
+        await thaw(_val, eng_lsv_pent);
+        //console.log("initialized")
     }
 
     const subscribe = (cb) => {
@@ -27,15 +37,8 @@ export function pkStore() {
     };
 
     const query = async (q) => {
-        //ensures _val is initialized before querying
-        if(!initialized) {
-            await init();
-        }
-        console.log("query")
-        let r = await _val.gqlQuery(q, () => console.log("finished query"));
-        console.log("r")
-        console.log(JSON.stringify(r, null, 2))
-        return r;
+        await memoInit();
+        return JSON.stringify(await _val.gqlQuery(q), null, 2);
     };
 
     return { subscribe, query };

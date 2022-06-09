@@ -1,27 +1,31 @@
 <script>
-    import { pk } from "$lib/data/stores.js";
+    import { pk, docSet, book, chapter } from "$lib/data/stores.js";
+    import Navbar from "$lib/components/Navbar.svelte";
 
-    const getData = async function() {
-        const res = await pk.query(`{
-            docSets { 
-                id
+    $: promise = pk.query(`{
+            docSet(id: "`+$docSet+`") {
                 documents {
                     bookCode: header(id: "bookCode")
+                } 
+                document(bookCode:"`+$book+`") {
+                    bookCode: header(id: "bookCode")
+                    cv(chapterVerses:"`+$chapter+`:1", includeContext: true) {
+                        scopeLabels(startsWith:["chapter", "verses"])
+                        text
+                    }
                 }
             }
         }`);
-        return res;
-    }
-    let promise = getData();
-
 
 </script>
+
+<Navbar/>
 
 <p>query:</p>
 {#await promise}
 	<p>...waiting</p>
 {:then data}
-	<pre>{JSON.stringify(data, null, 2)}</pre>
+    <pre>{data}</pre>
 {:catch error}
 	<p style="color: red">{error.message}</p>
 {/await}
