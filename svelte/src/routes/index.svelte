@@ -1,8 +1,7 @@
 <script>
-    import { pk, test } from "$lib/data/stores.js";
+    import { pk } from "$lib/data/stores.js";
 
     const getData = async function() {
-        console.log("index")
         const res = await pk.query(`{
             docSets { 
                 id
@@ -11,10 +10,7 @@
                 }
             }
         }`);
-        let j = JSON.stringify(res, null, 2);
-        console.log("getdata")
-        console.log(j);
-        return j;
+        return res;
     }
     let promise = getData();
 
@@ -25,9 +21,7 @@
 {#await promise}
 	<p>...waiting</p>
 {:then data}
-	<pre>{data}</pre>
+	<pre>{JSON.stringify(data, null, 2)}</pre>
 {:catch error}
 	<p style="color: red">{error.message}</p>
 {/await}
-<p>Proskomma:</p>
-<pre>{JSON.stringify($pk, null, 2)}</pre>

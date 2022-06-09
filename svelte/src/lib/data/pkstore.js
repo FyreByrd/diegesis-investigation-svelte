@@ -10,13 +10,8 @@ export function pkStore() {
 
     //thaws frozen archives
     const init = async () => {
-        try {
-            if(!initialized) {
-                await thaw(_val, eng_web_jhn);
-            }
-        }
-        catch(err) {
-            console.log(err)
+        if(!initialized) {
+            await thaw(_val, eng_web_jhn);
         }
         initialized = true;
     }
