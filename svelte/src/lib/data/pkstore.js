@@ -36,9 +36,11 @@ export function pkStore() {
         };
     };
 
-    const query = async (q) => {
+    const query = async (q,cb) => {
         await memoInit();
-        return JSON.stringify(await _val.gqlQuery(q), null, 2);
+        let j = JSON.stringify(await _val.gqlQuery(q), null, 2);
+        if(cb) { cb(j); }
+        return j;
     };
 
     return { subscribe, query };

@@ -1,8 +1,18 @@
 <script>
-    import { pk, docSet, book, chapter } from '../data/stores';
+    import { pk, docSet, book, chapter, defaultBook } from '../data/stores';
 
-    let docPromise = pk.query(`{docSets{id}}`);
-    $: bookPromise = pk.query(`{docSet(id:"`+$docSet+`"){documents{bookCode:header(id:"bookCode")}}}`);
+    let docPromise = pk.query(`{
+        docSets {
+            id
+        }
+    }`);
+    $: bookPromise = pk.query(`{
+        docSet(id: "`+$docSet+`") {
+            documents {
+                bookCode:header(id: "bookCode")
+            }
+        }
+    }`);
     $: chapPromise = pk.query(`{
         docSet(id:"`+$docSet+`"){
             document(bookCode:"`+$book+`"){
