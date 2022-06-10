@@ -21,3 +21,21 @@ export const defaultBook = derived(
         });
     }
 );
+
+export const numVerses = derived(
+    [docSet, book, chapter],
+    ([$docSet, $book, $chapter], set) => {
+        pk.query(`{
+            docSet(id: "`+$docSet+`") { 
+                document(bookCode:"`+$book+`") {
+                    cvIndex(chapter:`+$chapter+`) {
+                        verseNumbers { number }
+                    }
+                }
+            }
+        }`, 
+        r => {
+            set(JSON.parse(r).data.docSet.document.cvIndex.verseNumbers.length)
+        });
+    }
+);

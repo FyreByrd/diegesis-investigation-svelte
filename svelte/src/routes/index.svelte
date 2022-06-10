@@ -1,6 +1,5 @@
 <script>
-    import { pk, docSet, book, chapter, defaultBook } from "$lib/data/stores.js";
-    import Navbar from "$lib/components/Navbar.svelte";
+    import { pk, docSet, book, chapter, defaultBook, numVerses } from "$lib/data/stores.js";
 
     $: promise = pk.query(`{
             docSet(id: "`+$docSet+`") {
@@ -9,7 +8,8 @@
                 } 
                 document(bookCode:"`+$book+`") {
                     bookCode: header(id: "bookCode")
-                    cv(chapterVerses:"`+$chapter+`:1", includeContext: true) {
+                    cv(chapterVerses:"`+$chapter+`:1-`+$numVerses+`", includeContext: true) {
+                        scopeLabels(startsWith: "verse")
                         text
                     }
                 }
@@ -17,8 +17,6 @@
         }`);
 
 </script>
-
-<Navbar/>
 
 <p>query:</p>
 {#await promise}
@@ -29,6 +27,5 @@
 	<p style="color: red">{error.message}</p>
 {/await}
 
-<pre>
-{$defaultBook}
-</pre>
+<pre>{$defaultBook}</pre>
+<pre>{$numVerses}</pre>
