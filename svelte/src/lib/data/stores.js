@@ -19,40 +19,85 @@ export const docSet = (() => {
 
     return { set: internal.set, subscribe: external.subscribe }
 })();
-export const book = writable("");
-export const chapter = writable("");
-
-export const book2 = (() => {
+export const book = (() => {
     const internal = writable("");
-    const external = writable("a");
-
-    return { set: internal.set, subscribe: external.subscribe }
-})();
-
-export const chapter2 = (() => {
-    const internal = writable("");
-    const external = writable("a");
-
-    return { set: internal.set, subscribe: external.subscribe }
-})();
-
-/*
-const defaults = derived(
-    [docSet, book, chapter],
-    ([$docSet, $book, $chapter]) => {
-        console.log("docSet: "+$docSet)
-        if($docSet === "") {
+    const external = derived([internal, docSet], ([$internal, $docSet], set) => {
+        const setDefault = () => {
             pk.query(`{
-                docSets {
-                    id
+                docSet(id: "`+$docSet+`") {
+                    documents {
+                        bookCode: header(id: "bookCode")
+                    }
                 }
             }`, 
             r => {
-                $docSet = JSON.parse(r).data.docSets[0]
+                try{
+                    const b = JSON.parse(r).data.docSet.documents[0].bookCode;
+                    internal.set(b);
+                    set(b);
+                } catch (err) {
+                    if(!(err instanceof TypeError)) { throw err;}
+                }
             });
         }
-    }
-);*/
+        
+        if($internal === "") {
+            setDefault();
+        } else {
+            pk.query(`{
+                docSet(id: "`+$docSet+`") { 
+                    document(bookCode: "`+$internal+`") {
+                        bookCode: header(id: "bookCode")
+                    }
+                }
+            }`,
+            r => {
+                try { 
+                    const dExists = JSON.parse(r).data.docSet.document !== null;
+                    if(dExists) { set($internal) } else { setDefault(); }
+                } catch (err) {
+                    if(!(err instanceof TypeError)) { throw err;}
+                }
+            });
+        }
+    })
+
+    return { set: internal.set, subscribe: external.subscribe }
+})();
+export const chapter = (() => {
+    const internal = writable(0);
+    const external = derived([internal, docSet, book], ([$internal, $docSet, $book], set) => {
+        const setDefault = () => {
+            internal.set(1);
+            set(1);
+        }
+        
+        if($internal === 0) {
+            setDefault();
+        } else {
+            pk.query(`{
+                docSet(id: "`+$docSet+`") { 
+                    document(bookCode: "`+$book+`") {
+                        cIndex(chapter: `+$internal+`) {
+                            text
+                        }
+                    }
+                }
+            }`,
+            r => {
+                try {
+                    const cExists = JSON.parse(r).data.docSet.document.cIndex.text !== "";
+                    if(cExists) { set($internal) } else { setDefault(); }
+                } catch (err) {
+                    if(!(err instanceof TypeError)) { throw err;}
+                }
+            });
+        }
+    })
+
+    return { set: internal.set, subscribe: external.subscribe }
+})();
+
 
 export const numVerses = derived(
     [docSet, book, chapter],

@@ -1,9 +1,11 @@
 <script>
     import {pk,docSet,book,chapter} from '$lib/data/stores';
     $: promise = pk.query(`{
-            docSet(id: "`+$docSet+`") { 
-                documents {
-                    bookCode: header(id: "bookCode")
+            docSet(id: "eng_web") { 
+                document(bookCode: "JHN") {
+                    cIndex(chapter: 22) {
+                        text
+                    }
                 }
             }
         }`);

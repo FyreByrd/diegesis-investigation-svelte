@@ -1,5 +1,5 @@
 <script>
-    import { pk, docSet, book, chapter, book2, chapter2} from '../data/stores';
+    import { pk, docSet, book, chapter} from '../data/stores';
 
     let docPromise = pk.query(`{
         docSets {
@@ -64,4 +64,4 @@
 {/await}
 
 <h1>{$docSet}: {$book} {$chapter}</h1>
-<h1>{$docSet}: {$book2} {$chapter2}</h1>
+<h1>{$docSet}: {$book} {$chapter}</h1>
