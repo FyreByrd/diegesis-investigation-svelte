@@ -1,14 +1,15 @@
 <script>
     import {pk,docSet,book,chapter} from '$lib/data/stores';
     $: promise = pk.query(`{
-            docSet(id: "eng_web") { 
-                document(bookCode: "JHN") {
-                    cIndex(chapter: 22) {
-                        text
+                docSet(id: "`+$docSet+`") {
+                    documents {
+                        bookCode: header(id: "bookCode")
+                    }
+                    document(bookCode: "JHN") {
+                        bookCode: header(id: "bookCode")
                     }
                 }
-            }
-        }`);
+            }`);
 </script>
 
 {#await promise}

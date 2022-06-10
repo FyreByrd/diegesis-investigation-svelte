@@ -5,16 +5,18 @@ export const pk = pkStore();
 export const docSet = (() => {
     const internal = writable("");
     const external = derived(internal, ($internal, set) => {
-        if($internal === "") {
-            pk.query(`{
-                docSets {
-                    id
-                }
-            }`, 
-            r => {
-                set(JSON.parse(r).data.docSets[0].id);
-            }); 
-        } else { set($internal)}
+        pk.query(`{
+            docSets {
+                id
+            }
+        }`, 
+        r => {
+            if($internal === "") {
+                const ds = JSON.parse(r).data.docSets[0].id;
+                $internal = ds;
+                set(ds);
+            } else { set($internal); }
+        });
     })
 
     return { set: internal.set, subscribe: external.subscribe }
@@ -22,57 +24,44 @@ export const docSet = (() => {
 export const book = (() => {
     const internal = writable("");
     const external = derived([internal, docSet], ([$internal, $docSet], set) => {
-        const setDefault = () => {
-            pk.query(`{
-                docSet(id: "`+$docSet+`") {
-                    documents {
-                        bookCode: header(id: "bookCode")
-                    }
+        pk.query(`{
+            docSet(id: "`+$docSet+`") {
+                documents {
+                    bookCode: header(id: "bookCode")
                 }
-            }`, 
-            r => {
-                try{
-                    const b = JSON.parse(r).data.docSet.documents[0].bookCode;
-                    internal.set(b);
-                    set(b);
-                } catch (err) {
-                    if(!(err instanceof TypeError)) { throw err;}
+                document(bookCode: "`+$internal+`") {
+                    bookCode: header(id: "bookCode")
                 }
-            });
-        }
-        
-        if($internal === "") {
-            setDefault();
-        } else {
-            pk.query(`{
-                docSet(id: "`+$docSet+`") { 
-                    document(bookCode: "`+$internal+`") {
-                        bookCode: header(id: "bookCode")
-                    }
+            }
+        }`, 
+        r => {
+            try{
+                const b = JSON.parse(r).data.docSet.document;
+                const firstBook = JSON.parse(r).data.docSet.documents[0].bookCode;
+                if(b === null) {
+                    $internal = firstBook;
+                    set(firstBook);
+                } else { 
+                    $internal = b.bookCode;
+                    set(b.bookCode);
                 }
-            }`,
-            r => {
-                try { 
-                    const dExists = JSON.parse(r).data.docSet.document !== null;
-                    if(dExists) { set($internal) } else { setDefault(); }
-                } catch (err) {
-                    if(!(err instanceof TypeError)) { throw err;}
-                }
-            });
-        }
+            } catch (err) {
+                if(!(err instanceof TypeError)) { throw err;}
+            }
+        });
     })
 
     return { set: internal.set, subscribe: external.subscribe }
 })();
 export const chapter = (() => {
-    const internal = writable(0);
+    const internal = writable("");
     const external = derived([internal, docSet, book], ([$internal, $docSet, $book], set) => {
         const setDefault = () => {
-            internal.set(1);
-            set(1);
+            $internal = "1";
+            set("1");
         }
         
-        if($internal === 0) {
+        if($internal === "") {
             setDefault();
         } else {
             pk.query(`{
@@ -112,7 +101,11 @@ export const numVerses = derived(
             }
         }`, 
         r => {
-            set(JSON.parse(r).data.docSet.document.cvIndex.verseNumbers.length)
+            try {
+                set(JSON.parse(r).data.docSet.document.cvIndex.verseNumbers.length);
+            } catch (err) {
+                if(!(err instanceof TypeError)) { throw err;}
+            }
         });
     }
 );
