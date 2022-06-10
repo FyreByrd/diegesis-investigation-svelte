@@ -2,25 +2,57 @@ import { pkStore } from './pkstore';
 import { writable, derived } from 'svelte/store';
 
 export const pk = pkStore();
-export const docSet = writable("eng_web");
-export const book = writable("JHN");
-export const chapter = writable(1);
-
-export const defaultBook = derived(
-    docSet,
-    ($docSet, set) => {
-        pk.query(`{
-            docSet(id: "`+$docSet+`") {
-                documents {
-                    bookCode:header(id: "bookCode")
+export const docSet = (() => {
+    const internal = writable("");
+    const external = derived(internal, ($internal, set) => {
+        if($internal === "") {
+            pk.query(`{
+                docSets {
+                    id
                 }
-            }
-        }`, 
-        r => {
-            set(JSON.parse(r).data.docSet.documents[0].bookCode)
-        });
+            }`, 
+            r => {
+                set(JSON.parse(r).data.docSets[0].id);
+            }); 
+        } else { set($internal)}
+    })
+
+    return { set: internal.set, subscribe: external.subscribe }
+})();
+export const book = writable("");
+export const chapter = writable("");
+
+export const book2 = (() => {
+    const internal = writable("");
+    const external = writable("a");
+
+    return { set: internal.set, subscribe: external.subscribe }
+})();
+
+export const chapter2 = (() => {
+    const internal = writable("");
+    const external = writable("a");
+
+    return { set: internal.set, subscribe: external.subscribe }
+})();
+
+/*
+const defaults = derived(
+    [docSet, book, chapter],
+    ([$docSet, $book, $chapter]) => {
+        console.log("docSet: "+$docSet)
+        if($docSet === "") {
+            pk.query(`{
+                docSets {
+                    id
+                }
+            }`, 
+            r => {
+                $docSet = JSON.parse(r).data.docSets[0]
+            });
+        }
     }
-);
+);*/
 
 export const numVerses = derived(
     [docSet, book, chapter],

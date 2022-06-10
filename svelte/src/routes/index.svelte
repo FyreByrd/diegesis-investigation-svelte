@@ -1,5 +1,5 @@
 <script>
-    import { pk, docSet, book, chapter, defaultBook, numVerses } from "$lib/data/stores.js";
+    import { pk, docSet, book, chapter, numVerses } from "$lib/data/stores.js";
 
     $: promise = pk.query(`{
             docSet(id: "`+$docSet+`") {
@@ -27,5 +27,4 @@
 	<p style="color: red">{error.message}</p>
 {/await}
 
-<pre>{$defaultBook}</pre>
 <pre>{$numVerses}</pre>
