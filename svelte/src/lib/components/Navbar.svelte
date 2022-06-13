@@ -1,8 +1,6 @@
 <script>
-    import { pk, docSet, book, chapter} from '../data/stores';
-    import { goto } from '$app/navigation';
-
-    $: next = {d:$docSet,b:$book,c:$chapter}
+    import { pk, nextDocSet, nextBook, nextChapter, numVerses } from '../data/stores';
+    import { goto, prefetch } from '$app/navigation';
 
     let docPromise = pk.query(`{
         docSets {
@@ -10,15 +8,15 @@
         }
     }`);
     $: bookPromise = pk.query(`{
-        docSet(id: "`+next.d+`") {
+        docSet(id: "`+$nextDocSet+`") {
             documents {
                 bookCode:header(id: "bookCode")
             }
         }
     }`);
     $: chapPromise = pk.query(`{
-        docSet(id:"`+next.d+`"){
-            document(bookCode:"`+next.b+`"){
+        docSet(id:"`+$nextDocSet+`"){
+            document(bookCode:"`+$nextBook+`"){
                 cIndexes {
                     chapter
                 }
@@ -27,16 +25,21 @@
     }`);
 
     function handleClick() {
-        goto("/read/"+next.d+"/"+next.b+"/"+next.c);
+        const link = "/read/"+$nextDocSet+"/"+$nextBook+"/"+$nextChapter+"#"+nextVerse;
+        prefetch(link);
+        goto(link);
     }
 
+    let nextVerse = 1;
+
+    $: console.log($nextDocSet+" "+$nextBook+" "+$nextChapter);
 </script>
 
 <label for="docSet">Translation:</label>
 {#await docPromise}
 	<span>loading...</span>
 {:then data}
-    <select id="docSet" name="docSet" bind:value={next.d}>
+    <select id="docSet" name="docSet" bind:value={$nextDocSet}>
         {#each JSON.parse(data).data.docSets as doc}
             <option value="{doc.id}">{doc.id}</option>
         {/each}
@@ -49,7 +52,7 @@
 {#await bookPromise}
 	<span>loading...</span>
 {:then data}
-    <select id="book" name="book" bind:value={next.b}>
+    <select id="book" name="book" bind:value={$nextBook}>
         {#each JSON.parse(data).data.docSet.documents as b}
             <option value="{b.bookCode}">{b.bookCode}</option>
         {/each}
@@ -62,7 +65,7 @@
 {#await chapPromise}
 	<span>loading...</span>
 {:then data}
-    <select id="chapter" name="chapter" bind:value={next.c}>
+    <select id="chapter" name="chapter" bind:value={$nextChapter}>
         {#each JSON.parse(data).data.docSet.document.cIndexes as c}
             <option value="{""+c.chapter}">
                 {c.chapter}
@@ -72,5 +75,14 @@
 {:catch error}
 	<pre style="color: red">{error.message}</pre>
 {/await}
+
+<label for="verse">Verse:</label>
+<select id="verse" name="verse" bind:value={nextVerse}>
+    {#each Array($numVerses) as _, i}
+        <option value="{i+1}">
+            {i+1}
+        </option>
+    {/each}
+</select>
 
 <button on:click={handleClick}>submit</button>

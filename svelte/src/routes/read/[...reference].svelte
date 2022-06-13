@@ -1,14 +1,9 @@
 <script>
     import { page } from '$app/stores';
-    import { pk, docSet, book, chapter, numVerses } from '$lib/data/stores';
-    import { goto } from '$app/navigation';
+    import { pk, docSet, book, chapter, numVerses, bookTitle } from '$lib/data/stores';
 
-    //$docSet = $page.params.docSet;
-    //$book = $page.params.book;
-    //$chapter = $page.params.chapter;
-    $: ref = (() => {
+    $: (() => {
         const r = $page.params.reference.split("/");
-        console.log(r);
         if(r.length > 0) {
             $docSet = r[0];
         }
@@ -21,7 +16,6 @@
         if(r.length > 3) {
             
         }
-        return r;
     })();
 
     $: promise = pk.query(`{
@@ -35,10 +29,11 @@
     }`);
 </script>
 
-<pre>{JSON.stringify($page.params, null, 2)}</pre>
-<pre>{"reference: ["+ref+"]"}</pre>
+<!--<pre>{JSON.stringify($page.params, null, 2)}</pre>
+<pre>{"reference: ["+ref+"]"}</pre>-->
 
-<p>query:</p>
+<h1>{$bookTitle}</h1>
+<h2>Chapter {$chapter}</h2>
 {#await promise}
 	<p>...waiting</p>
 {:then data}

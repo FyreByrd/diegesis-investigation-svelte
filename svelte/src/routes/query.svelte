@@ -1,15 +1,14 @@
 <script>
-    import {pk,docSet,book,chapter} from '$lib/data/stores';
+    import {pk,docSet,book,chapter, numVerses} from '$lib/data/stores';
     $: promise = pk.query(`{
-                docSet(id: "`+$docSet+`") {
-                    documents {
-                        bookCode: header(id: "bookCode")
-                    }
-                    document(bookCode: "JHN") {
-                        bookCode: header(id: "bookCode")
-                    }
+        docSet(id: "`+$docSet+`") {
+            document(bookCode: "`+$book+`") {
+                cv(chapterVerses:"1") {
+                    text
                 }
-            }`);
+            }
+        }
+    }`);
 </script>
 
 {#await promise}
@@ -19,4 +18,3 @@
 {:catch err}
     <pre style="color:red;">{err.message}</pre>
 {/await}
-<pre>{$book}</pre>
