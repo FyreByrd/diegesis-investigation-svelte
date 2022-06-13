@@ -43,5 +43,7 @@ export function pkStore() {
         return j;
     };
 
-    return { subscribe, query };
+    const gqlQuery = async (q,cb) => { query(q,cb)}
+
+    return { subscribe, query, gqlQuery };
 }
