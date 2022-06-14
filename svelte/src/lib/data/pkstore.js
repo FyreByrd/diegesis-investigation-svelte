@@ -1,11 +1,9 @@
 import { Proskomma } from 'proskomma';
 import { thaw } from 'proskomma-freeze';
-import {eng_web_jhn} from './eng_web_jhn';
-import {eng_lsv_pent} from './eng_lsv_pent';
+import { docSets } from './docSets/docSets';
 
 export function pkStore() {
     let _val = new Proskomma();
-    //let initialized = null;
     const subs = [];
 
     const memo = {initialized: null}
@@ -20,10 +18,11 @@ export function pkStore() {
 
     //thaws frozen archives
     const init = async () => {
-        //console.log("initializing");
-        await thaw(_val, eng_web_jhn);
-        await thaw(_val, eng_lsv_pent);
-        //console.log("initialized")
+        console.log("initializing")
+        for(const ds of docSets) {
+            await thaw(_val, ds);
+        }
+        console.log("initialized")
     }
 
     const subscribe = (cb) => {

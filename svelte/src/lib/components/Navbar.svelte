@@ -32,7 +32,7 @@
 
     let nextVerse = 1;
 
-    $: console.log($nextDocSet+" "+$nextBook+" "+$nextChapter);
+    //$: console.log($nextDocSet+" "+$nextBook+" "+$nextChapter);
 </script>
 
 <label for="docSet">Translation:</label>
