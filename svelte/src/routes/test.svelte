@@ -32,8 +32,9 @@
         docSet(id:"${ds}") {
             document(bookCode: "${b}") {
                 title: header(id: "toc2")
-                mainSequence {
-                    blocks(withScriptureCV: "${cv}") {
+                tags
+                sequences (types:"footnote"){
+                    blocks {
                         bs { payload }
                         items { type subType payload }
                     }
@@ -73,10 +74,7 @@
 {#await promise}
     <pre>waiting...</pre>
 {:then data}
-    <h1>{JSON.parse(data).data.docSet.document.title}</h1>
-    <h2>Chapter: {cv}</h2>
-    {@html renderChapter(data)}
-    <!--<pre>{data}</pre>-->
+    <pre>{data}</pre>
 {:catch err}
     <pre style="color:red;">{err.message}</pre>
 {/await}

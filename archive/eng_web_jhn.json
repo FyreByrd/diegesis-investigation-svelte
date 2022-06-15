@@ -1,6 +1,6 @@
-{"canon":[
-    ["./usfm/web/73-JHNeng-web.usfm", {
-        "lang": "eng",
-        "abbr": "web"
-    }]
-]}
+{
+    "selectors": { "lang": "eng", "abbr": "web" },
+    "canon":[
+        {"file":"./usfm/web/73-JHNeng-web.usfm", "tags":["foo","bar","baz"]}
+    ]
+}

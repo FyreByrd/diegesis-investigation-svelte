@@ -2,10 +2,10 @@ const {pkWithDocs} = require("./load");
 const fs = require("fs-extra");
 const { freeze } = require('proskomma-freeze');
 
-const filename = 'eng_lsv_pent';
+const filename = 'eng_web_jhn';
 
 const pk = pkWithDocs(
-    JSON.parse(fs.readFileSync(filename+".json")).canon
+    JSON.parse(fs.readFileSync(filename+".json"))
 );
 
 const frozen = freeze(pk);

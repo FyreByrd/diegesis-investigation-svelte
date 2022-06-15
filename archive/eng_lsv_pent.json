@@ -1,22 +1,10 @@
-{"canon":[
-    ["./usfm/lsv/GEN.usfm", {
-        "lang": "eng",
-        "abbr": "lsv"
-    }],
-    ["./usfm/lsv/EXO.usfm", {
-        "lang": "eng",
-        "abbr": "lsv"
-    }],
-    ["./usfm/lsv/LEV.usfm", {
-        "lang": "eng",
-        "abbr": "lsv"
-    }],
-    ["./usfm/lsv/NUM.usfm", {
-        "lang": "eng",
-        "abbr": "lsv"
-    }],
-    ["./usfm/lsv/DEU.usfm", {
-        "lang": "eng",
-        "abbr": "lsv"
-    }]
-]}
+{    
+    "selectors":{ "lang": "eng", "abbr": "lsv" },
+    "canon":[
+        "./usfm/lsv/GEN.usfm",
+        "./usfm/lsv/EXO.usfm",
+        "./usfm/lsv/LEV.usfm",
+        "./usfm/lsv/NUM.usfm",
+        "./usfm/lsv/DEU.usfm"
+    ]
+}

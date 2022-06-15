@@ -3,17 +3,18 @@ const fse = require('fs-extra');
 
 const { Proskomma } = require('proskomma');
 
-const pkWithDocs = (contentSpecs) => {
+const pkWithDocs = (docSet) => {
   const pk = new Proskomma();
 
-  for (const [fp, selectors] of contentSpecs) {
-    const content = fse.readFileSync(path.resolve(__dirname, fp));
-    let contentType = fp.split('.').pop();
+  for (const doc of docSet.canon) {
+    const content = fse.readFileSync(path.resolve(__dirname, doc.file));
+    let contentType = doc.file.split('.').pop();
     pk.importDocument(
-      selectors,
+      docSet.selectors,
       contentType,
       content,
-      {},
+      {},{},{},
+      doc.tags
     );
   }
   return pk;
