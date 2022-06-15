@@ -3,7 +3,7 @@
     
     let ds = "eng_web"
     let b = "JHN"
-    let cv = "1"
+    let cv = "1:1-10"
     
     /*$: promise = pk.query(`{
         docSet (id: "${ds}") {
@@ -29,15 +29,11 @@
     }`);*/
 
     $: promise = pk.query(`{
-        docSet(id:"${ds}") {
-            document(bookCode: "${b}") {
-                title: header(id: "toc2")
-                tags
-                sequences (types:"footnote"){
-                    blocks {
-                        bs { payload }
-                        items { type subType payload }
-                    }
+        book: document(docSetId: "${ds}" withBook: "${b}") {
+            title: header(id: "toc2")
+            mainSequence {
+                blocks(withScriptureCV: "${cv}") {
+                    items { type subType payload}
                 }
             }
         }
