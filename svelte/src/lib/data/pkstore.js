@@ -18,11 +18,9 @@ export function pkStore() {
 
     //thaws frozen archives
     const init = async () => {
-        console.log("initializing")
         for(const ds of docSets) {
             await thaw(_val, ds);
         }
-        console.log("initialized")
     }
 
     const subscribe = (cb) => {
