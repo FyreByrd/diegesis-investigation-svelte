@@ -1,6 +1,7 @@
 <script>
-    import {pk,docSet,book,chapter, numVerses} from '$lib/data/stores';
-    
+    import {docSet,book,chapter, numVerses} from '$lib/data/stores';
+    import {queryPk} from '$lib/scripts/queryPk';
+
     let ds = "eng_web"
     let b = "JHN"
     let cv = "1:1-10"
@@ -28,7 +29,18 @@
         }
     }`);*/
 
-    $: promise = pk.query(`{
+    /*$: promise = pk.query(`{
+        book: document(docSetId: "${ds}" withBook: "${b}") {
+            title: header(id: "toc2")
+            mainSequence {
+                blocks(withScriptureCV: "${cv}") {
+                    items { type subType payload}
+                }
+            }
+        }
+    }`);*/
+
+    $: promise = queryPk(`{
         book: document(docSetId: "${ds}" withBook: "${b}") {
             title: header(id: "toc2")
             mainSequence {
@@ -38,38 +50,12 @@
             }
         }
     }`);
-
-    function renderChapter(data) {
-        const blocks = JSON.parse(data).data.docSet.document.mainSequence.blocks;
-        let rendered = "";
-        for(let i = 0; i < blocks.length; i++)
-            rendered += `<div class="${i === 0?"m":"p"}">${renderBlock(blocks[i])}</div>`
-        return rendered;
-    }
-
-    function renderBlock(block) {
-        let rendered = "";
-        for(let i = 0; i < block.items.length; i++) {
-            var item = block.items[i];
-            if(item.type === "scope" && item.subType === "start") {
-                var payload = item.payload.split("/")
-                if(payload[0] === "verses") {
-                    rendered += `<em id="${payload[1]}">${payload[1]}</em><span>&nbsp;</span>`
-                } else {
-                    //rendered += `<pre>--${item.type+":"+item.subType+" > "+payload}</pre>`
-                }
-            }else if(item.type === "token") {
-                rendered += `${item.payload}`
-            }
-        }
-
-        return rendered;
-    }
 </script>
 
 {#await promise}
     <pre>waiting...</pre>
 {:then data}
+    <!--{(console.log(data),'')}-->
     <pre>{data}</pre>
 {:catch err}
     <pre style="color:red;">{err.message}</pre>

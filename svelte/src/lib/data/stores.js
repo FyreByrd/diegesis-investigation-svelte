@@ -1,21 +1,19 @@
-import { pkStore } from './pkstore';
 import { docSetStore, bookStore, chapterStore } from './reference-stores';
 import { derived } from 'svelte/store';
+import { queryPk } from '../scripts/queryPk';
 
-export const pk = pkStore();
+export const docSet = docSetStore();
+export const book = bookStore(docSet);
+export const chapter = chapterStore(docSet, book);
 
-export const docSet = docSetStore(pk);
-export const book = bookStore(pk, docSet);
-export const chapter = chapterStore(pk, docSet, book);
-
-export const nextDocSet = docSetStore(pk);
-export const nextBook = bookStore(pk, nextDocSet);
-export const nextChapter = chapterStore(pk, nextDocSet, nextBook);
+export const nextDocSet = docSetStore();
+export const nextBook = bookStore(nextDocSet);
+export const nextChapter = chapterStore(nextDocSet, nextBook);
 
 export const numVerses = derived(
     [docSet, book, chapter],
     ([$docSet, $book, $chapter], set) => {
-        pk.query(`{
+        queryPk(`{
             docSet(id: "`+$docSet+`") { 
                 document(bookCode:"`+$book+`") {
                     cvIndex(chapter:`+$chapter+`) {
@@ -34,7 +32,7 @@ export const numVerses = derived(
     }
 );
 export const bookTitle = derived([docSet, book], ([$docSet, $book], set) => {
-    pk.query(`{
+    queryPk(`{
         docSet(id: "`+$docSet+`") {
             document(bookCode: "`+$book+`") {
                 bookTitle: header(id: "toc")
@@ -48,4 +46,4 @@ export const bookTitle = derived([docSet, book], ([$docSet, $book], set) => {
             if(!(err instanceof TypeError)) { throw err;}
         }
     })
-})
+});

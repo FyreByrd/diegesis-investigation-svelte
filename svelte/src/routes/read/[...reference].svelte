@@ -1,6 +1,7 @@
 <script>
     import { page } from '$app/stores';
-    import { pk, docSet, book, chapter, numVerses, bookTitle } from '$lib/data/stores';
+    import { docSet, book, chapter, numVerses, bookTitle } from '$lib/data/stores';
+    import { queryPk } from '$lib/scripts/queryPk';
 
     $: (() => {
         const r = $page.params.reference.split("/");
@@ -18,7 +19,7 @@
         }
     })();
 
-    $: promise = pk.query(`{
+    $: promise = queryPk(`{
         docSet(id:"${$docSet}") {
             document(bookCode: "${$book}") {
                 title: header(id: "toc2")

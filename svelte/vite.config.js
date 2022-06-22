@@ -1,4 +1,4 @@
-// yarn add --dev @esbuild-plugins/node-globals-polyfill
+/*// yarn add --dev @esbuild-plugins/node-globals-polyfill
 import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfill'
 // yarn add --dev @esbuild-plugins/node-modules-polyfill
 import { NodeModulesPolyfillPlugin } from '@esbuild-plugins/node-modules-polyfill'
@@ -15,7 +15,7 @@ export default {
             util: 'rollup-plugin-node-polyfills/polyfills/util',
             sys: 'util',
             events: 'rollup-plugin-node-polyfills/polyfills/events',
-            stream: 'rollup-plugin-node-polyfills/polyfills/stream',
+            //stream: 'rollup-plugin-node-polyfills/polyfills/stream',
             path: 'rollup-plugin-node-polyfills/polyfills/path',
             querystring: 'rollup-plugin-node-polyfills/polyfills/qs',
             punycode: 'rollup-plugin-node-polyfills/polyfills/punycode',
@@ -71,4 +71,4 @@ export default {
             ]
         }
     }
-}
+}*/

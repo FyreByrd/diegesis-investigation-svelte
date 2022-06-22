@@ -1,5 +1,5 @@
 <script>
-    import {pk} from '$lib/data/stores'
+    import { queryPk } from '$lib/scripts/queryPk';
 
     export const searchTerms = (text) => (
         text.split(/ +/)
@@ -108,7 +108,7 @@
     }
     let searchText = "";
     let query = "";
-    $: promise = (() => { if(query !== "") return pk.query(query)})();
+    $: promise = (() => { if(query !== "") return queryPk(query)})();
 </script>
 
 <input type="text" placeholder="Enter your search here" bind:value={searchText}/>

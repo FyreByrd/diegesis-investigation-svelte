@@ -1,20 +1,21 @@
 <script>
-    import { pk, nextDocSet, nextBook, nextChapter, numVerses } from '../data/stores';
+    import { nextDocSet, nextBook, nextChapter, numVerses } from '../data/stores';
     import { goto, prefetch } from '$app/navigation';
+    import { queryPk } from '$lib/scripts/queryPk';
 
-    let docPromise = pk.query(`{
+    let docPromise = queryPk(`{
         docSets {
             id
         }
     }`);
-    $: bookPromise = pk.query(`{
+    $: bookPromise = queryPk(`{
         docSet(id: "`+$nextDocSet+`") {
             documents {
                 bookCode:header(id: "bookCode")
             }
         }
     }`);
-    $: chapPromise = pk.query(`{
+    $: chapPromise = queryPk(`{
         docSet(id:"`+$nextDocSet+`"){
             document(bookCode:"`+$nextBook+`"){
                 cIndexes {

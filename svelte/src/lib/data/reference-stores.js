@@ -1,12 +1,13 @@
 import { writable, derived } from "svelte/store";
-export const docSetStore = (pk) => {
+import { queryPk } from '../scripts/queryPk';
+export const docSetStore = () => {
     const internal = writable("");
     const external = derived(internal, ($internal, set) => {
-        pk.query(`{
+        queryPk(`{
             docSets {
                 id
             }
-        }`, 
+        }`,
         r => {
             if($internal === "") {
                 const ds = JSON.parse(r).data.docSets[0].id;
@@ -19,15 +20,15 @@ export const docSetStore = (pk) => {
     return { set: internal.set, subscribe: external.subscribe }
 };
 
-export const bookStore = (pk, docSet) => {
+export const bookStore = (docSet) => {
     const internal = writable("");
     const external = derived([internal, docSet], ([$internal, $docSet], set) => {
-        pk.query(`{
-            docSet(id: "`+$docSet+`") {
+        queryPk(`{
+            docSet(id: "${$docSet}") {
                 documents {
                     bookCode: header(id: "bookCode")
                 }
-                document(bookCode: "`+$internal+`") {
+                document(bookCode: "${$internal}") {
                     bookCode: header(id: "bookCode")
                 }
             }
@@ -52,13 +53,13 @@ export const bookStore = (pk, docSet) => {
     return { set: internal.set, subscribe: external.subscribe }
 };
 
-export const chapterStore = (pk, docSet, book) => {
+export const chapterStore = (docSet, book) => {
     const internal = writable("");
     const external = derived([internal, docSet, book], ([$internal, $docSet, $book], set) => {
-        pk.query(`{
-            docSet(id: "`+$docSet+`") { 
-                document(bookCode: "`+$book+`") {
-                    cIndex(chapter: `+$internal+`) {
+        queryPk(`{
+            docSet(id: "${$docSet}") { 
+                document(bookCode: "${$book}") {
+                    cIndex(chapter: ${$internal}) {
                         text
                     }
                 }

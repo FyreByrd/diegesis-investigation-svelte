@@ -1,10 +1,9 @@
 import { Proskomma } from 'proskomma';
 import { thaw } from 'proskomma-freeze';
-import { docSets } from './docSets/docSets';
+import { docSets } from '$lib/data/docSets/docSets.js';
 
-export function pkStore() {
+const pk = (() => {
     let _val = new Proskomma();
-    const subs = [];
 
     const memo = {initialized: null}
     function memoInit(){
@@ -23,24 +22,24 @@ export function pkStore() {
         }
     }
 
-    const subscribe = (cb) => {
-        subs.push(cb);
-        cb(_val);
-        
-        return () => {
-            const index = subs.findIndex((fn) => fn === cb);
-            subs.splice(index, 1);
-        };
-    };
-
     const query = async (q,cb) => {
         await memoInit();
-        let j = JSON.stringify(await _val.gqlQuery(q), null, 2);
+        let j = await _val.gqlQuery(q);
         if(cb) { cb(j); }
         return j;
     };
 
-    const gqlQuery = async (q,cb) => { query(q,cb)}
+    const gqlQuery = async (q,cb) => { query(q,cb) }
 
-    return { subscribe, query, gqlQuery };
+    return { query, gqlQuery };
+})();
+
+export async function post({request}) {
+    const body = await request.json();
+    //console.log("request: "+JSON.stringify(body, null, 2));
+    return {
+        body: {
+            text: await pk.query(body.query)
+        }
+    }
 }
