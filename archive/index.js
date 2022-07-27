@@ -2,15 +2,9 @@ const {pkWithDocs} = require("./load");
 const fs = require("fs-extra");
 const { freeze } = require('proskomma-freeze');
 
-const filename = 'eng_web_jhn';
+const filenames = ['eng_web_pent', 'rus_syn_pent'];
 
-const pk = pkWithDocs(
-    JSON.parse(fs.readFileSync(filename+".json"))
-);
-
-const frozen = freeze(pk);
-
-const writeFileAsync = async function (promise, fname) {
+const writeFileAsync = async function (promise, fname, pk) {
     content = await promise;
     fs.writeFile(fname+".js", 
         "const "+fname+" = \""+content+"\";\n\nexport {"+fname+"};", 
@@ -29,4 +23,12 @@ const writeFileAsync = async function (promise, fname) {
         console.log(JSON.stringify(result, null, 2));
 }
 
-writeFileAsync(frozen, filename);
+for(fname of filenames) {
+    const pk = pkWithDocs(
+        JSON.parse(fs.readFileSync(fname+".json"))
+    );
+
+    const frozen = freeze(pk);
+
+    writeFileAsync(frozen, fname, pk);
+}

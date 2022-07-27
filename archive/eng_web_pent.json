@@ -1,0 +1,10 @@
+{    
+    "selectors":{ "lang": "eng", "abbr": "web" },
+    "canon":[
+        {"file":"./usfm/web/02-GENeng-web.usfm", "tags":[]},
+        {"file":"./usfm/web/03-EXOeng-web.usfm", "tags":[]},
+        {"file":"./usfm/web/04-LEVeng-web.usfm", "tags":[]},
+        {"file":"./usfm/web/05-NUMeng-web.usfm", "tags":[]},
+        {"file":"./usfm/web/06-DEUeng-web.usfm", "tags":[]}
+    ]
+}

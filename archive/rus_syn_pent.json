@@ -1,0 +1,10 @@
+{    
+    "selectors":{ "lang": "rus", "abbr": "syn" },
+    "canon":[
+        {"file":"./usfm/rus/02-GENrussyn.usfm", "tags":[]},
+        {"file":"./usfm/rus/03-EXOrussyn.usfm", "tags":[]},
+        {"file":"./usfm/rus/04-LEVrussyn.usfm", "tags":[]},
+        {"file":"./usfm/rus/05-NUMrussyn.usfm", "tags":[]},
+        {"file":"./usfm/rus/06-DEUrussyn.usfm", "tags":[]}
+    ]
+}
