@@ -2,7 +2,11 @@ const {pkWithDocs} = require("./load");
 const fs = require("fs-extra");
 const { freeze } = require('proskomma-freeze');
 
-const filenames = ['eng_web_pent', 'rus_syn_pent'];
+const filenames = [
+    'eng_web_pent_and_gosp', 
+    'en_UK_webbe_pent_and_gosp',
+    'grc_mt_gosp'
+];
 
 const writeFileAsync = async function (promise, fname, pk) {
     content = await promise;

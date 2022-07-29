@@ -1,0 +1,14 @@
+{
+    "selectors": { "lang": "eng", "abbr": "webbe" },
+    "canon":[
+        {"file":"./usfm/webbe/02-GENengwebpb.usfm", "tags":[]},
+        {"file":"./usfm/webbe/03-EXOengwebpb.usfm", "tags":[]},
+        {"file":"./usfm/webbe/04-LEVengwebpb.usfm", "tags":[]},
+        {"file":"./usfm/webbe/05-NUMengwebpb.usfm", "tags":[]},
+        {"file":"./usfm/webbe/06-DEUengwebpb.usfm", "tags":[]},
+        {"file":"./usfm/webbe/70-MATengwebpb.usfm", "tags":[]},
+        {"file":"./usfm/webbe/71-MRKengwebpb.usfm", "tags":[]},
+        {"file":"./usfm/webbe/72-LUKengwebpb.usfm", "tags":[]},
+        {"file":"./usfm/webbe/73-JHNengwebpb.usfm", "tags":[]}
+    ]
+}

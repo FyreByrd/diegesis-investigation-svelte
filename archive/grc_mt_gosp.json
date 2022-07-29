@@ -1,0 +1,9 @@
+{
+    "selectors": { "lang": "grc", "abbr": "mt" },
+    "canon":[
+        {"file":"./usfm/grc/46-MATgrcmt.usfm", "tags":[]},
+        {"file":"./usfm/grc/47-MRKgrcmt.usfm", "tags":[]},
+        {"file":"./usfm/grc/48-LUKgrcmt.usfm", "tags":[]},
+        {"file":"./usfm/grc/49-JHNgrcmt.usfm", "tags":[]}
+    ]
+}
